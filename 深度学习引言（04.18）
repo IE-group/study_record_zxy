@@ -1,2 +1,3 @@
-
 1.3神经网络的监督学习
+对于图像应用，我们经常在神经网络上使用卷积（Convolutional Neural Network），通常缩写为 CNN。
+对于序列数据，经常使用 RNN，一种递归神经网络（Recurrent Neural Network）
