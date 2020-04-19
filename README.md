@@ -20,4 +20,4 @@ https://www.clinicalkey.com/#!/content/playContent/1-s2.0-S0030666511002234?retu
 https://www.clinicalkey.com/#!/content/playContent/1-s2.0-S1042368008000132?returnurl=https:%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1042368008000132%3Fshowall%3Dtrue&referrer=
 （Imaging of Acoustic Neuromas）
 
-2：阅读吴恩达深度学习笔记第一门课第一周第二周内容（学习笔记待第一门课阅读完一起上传）。
+2：阅读吴恩达深度学习笔记第一门课内容。
