@@ -3,7 +3,7 @@
 第二周学习内容：学习python基础教程，python深度学习两本书的内容。
 
 
-2020.04.18 1：
+2020.04.18 
 1.查阅听神经瘤相关文献（以下为有帮助的文章）
 https://www.sciencedirect.com/science/article/pii/S1878875011009995
 （Surgical Removal of Giant Acoustic Neuromas）
@@ -21,3 +21,7 @@ https://www.clinicalkey.com/#!/content/playContent/1-s2.0-S1042368008000132?retu
 （Imaging of Acoustic Neuromas）
 
 2：阅读吴恩达深度学习笔记第一门课内容。
+
+
+2020.04.24
+阅读学习吴恩达深度学习 第二门课、第三门课内容
