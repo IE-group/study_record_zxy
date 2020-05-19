@@ -1,0 +1,106 @@
+1.mIoU
+mIoU可解释为平均交并比，即在每个类别上计算IoU值（即真正样本数量/（真正样本数量+假负样本数量+假正样本数量））。
+
+def mean_iou(input, target, classes = 2):
+    """  compute the value of mean iou
+    :param input:  2d array, int, prediction
+    :param target: 2d array, int, ground truth
+    :param classes: int, the number of class
+    :return:
+        miou: float, the value of miou
+    """
+    miou = 0
+    for i in range(classes):
+        intersection = np.logical_and(target == i, input == i)
+        # print(intersection.any())
+        union = np.logical_or(target == i, input == i)
+        temp = np.sum(intersection) / np.sum(union)
+        miou += temp
+    return  miou/classes
+    
+    
+    2.IOU
+    IoU (Intersection over Union) 从字面意义上来说就是交并比，顾名思义就是两个集合的交集与两个集合的并集之比。
+    
+    def iou(input, target, classes=1):
+    """  compute the value of iou
+    :param input:  2d array, int, prediction
+    :param target: 2d array, int, ground truth
+    :param classes: int, the number of class
+    :return:
+        iou: float, the value of iou
+    """
+    intersection = np.logical_and(target == classes, input == classes)
+    # print(intersection.any())
+    union = np.logical_or(target == classes, input == classes)
+    iou = np.sum(intersection) / np.sum(union)
+    return iou
+
+
+3.F1
+F1分数（F1 Score），是统计学中用来衡量二分类模型精确度的一种指标。它同时兼顾了分类模型的精确率和召回率。F1分数可以看作是模型精确率和召回率的一种调和平均，它的最大值是1，最小值是0。
+def compute_f1(prediction, target):
+    """
+    :param prediction: 2d array, int,
+            estimated targets as returned by a classifier
+    :param target: 2d array, int,
+            ground truth
+    :return:
+        f1: float
+    """
+    prediction.tolist(), target.tolist()
+    img, target = np.array(prediction).flatten(), np.array(target).flatten()
+    f1 = f1_score(y_true=target, y_pred=img)
+    return  f1
+
+4.Kappa
+Kappa系数用于一致性检验，也可以用于衡量分类精度，但kappa系数的计算是基于混淆矩阵的。
+
+def compute_kappa(prediction, target):
+    """
+    :param prediction: 2d array, int,
+            estimated targets as returned by a classifier
+    :param target: 2d array, int,
+            ground truth
+    :return:
+        kappa: float
+    """
+    prediction.tolist(), target.tolist()
+    img, target = np.array(prediction).flatten(), np.array(target).flatten()
+    kappa = cohen_kappa_score(target, img)
+    return  kappa
+
+5. 套公式
+#二值分割图是一个波段的黑白图，正样本值为1，负样本值为0
+#通过矩阵的逻辑运算分别计算出tp,tn,fp,fn
+seg_inv, gt_inv = np.logical_not(premask), np.logical_not(groundtruth)
+true_pos = float(np.logical_and(premask, groundtruth).sum())  # float for division
+true_neg = np.logical_and(seg_inv, gt_inv).sum()
+false_pos = np.logical_and(premask, gt_inv).sum()
+false_neg = np.logical_and(seg_inv, groundtruth).sum()
+
+#然后根据公式分别计算出这几种指标
+prec = true_pos / (true_pos + false_pos + 1e-6)
+rec = true_pos / (true_pos + false_neg + 1e-6)
+accuracy = (true_pos + true_neg) / (true_pos + true_neg + false_pos + false_neg + 1e-6)
+F1 = 2 * true_pos / (2 * true_pos + false_pos + false_neg + 1e-6)
+IoU = true_pos / (true_pos + false_neg + false_pos + 1e-6)
+
+理解
+#统计groundtruth中正样本的个数
+GT_pos_sum = np.sum(groundtruth == 1)
+#统计预测的mask中正样本的个数
+Mask_pos_sum = np.sum(premask == 1)
+#统计在groundtruth和mask相同位置都是正样本的个数，即实际为正样本，预测也是正样本的个数
+True_pos_sum = np.sum((groundtruth == 1) * (premask == 1))
+#那么实际为正样本，预测也为正样本占预测的mask中正样本的比例就是Precision
+Precision = float(True_pos_sum) / (Mask_pos_sum + 1e-6)
+#实际为正样本，预测也为正样本占groundtruth中正样本的比例就是Recall
+Recall = float(True_pos_sum) / (GT_pos_sum + 1e-6)
+#IoU就是交并比，True_pos_sum就是正样本的交集，groundtruth与premask的正样本相加减去多加了一次的交集，就是最终的交并比
+m_Iou = float(True_pos_sum) / (GT_pos_sum + Mask_pos_sum - True_pos_sum + 1e-6)
+#这里的F1-score还是通过公式计算出来的，哈哈哈哈
+F1_score = 2 * Seg_Precision * Seg_Recall / (Seg_Precision + Seg_Recall + 1e-6)
+
+
+
