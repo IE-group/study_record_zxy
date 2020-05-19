@@ -1,0 +1,8 @@
+2.查找关于深度学习多模态特征融合的相关文献（特别是文本与图像多模态融合）
+https://ieeexplore.ieee.org/document/7493399   PET+MRI
+https://ieeexplore.ieee.org/document/7026195   图像+音频
+https://ieeexplore.ieee.org/document/8759303   融合图像特征+非图像信息纳入模型
+https://ieeexplore.ieee.org/document/8363717   PET+MRI+https://kns.cnki.net/KCMS/detail/11.2925.TP.20200506.1047.002.html?uid=WEEvREcwSlJHSldRa1FhcEFLUmViU1hKSXVwOHdWUk9JK0xEanpEYnFSRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MDkwNzJaK1pxRnl2bVVMdlBJMWs9THo3QmFMRzRITkhNcTR4RlpPc1BZdzlNem1SbjZqNTdUM2ZscVdNMENMTDdSN3Fk    MRI+CT
+https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDAUTO&filename=GYKJ202003023&uid=WEEvREcwSlJHSldRa1FhcEFLUmViU1hKSXVwOHdWUk9JK0xEanpEYnFSRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MDczMDhZdWR0RkN2aFZMM0pJalRBWkxHNEhOSE1ySTlIWjRSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI3cWY=                                         MRI+CT+临床量表数据
+https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2019&filename=GZXB201907018&uid=WEEvREcwSlJHSldRa1FhcEFLUmViU1hKSXV0Y0dSanVrU0VFQUVlbHE4ND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MTg0NjdmWXVkdEZDcm5VNy9BSWpmVGJMRzRIOWpNcUk5RWJJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSN3E=                                          多模态MRI
+https://kns.cnki.net/KCMS/detail/11.2223.N.20191217.1326.008.html?uid=WEEvREcwSlJHSldRa1FhcEFLUmViU1hKSXV0Y0dSanVrU0VFQUVlbHE4ND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MDQ0ODBOQ1hUYkxHNEg5ak5yWTVDWk90OFl3OU16bVJuNmo1N1QzZmxxV00wQ0xMN1I3cWRaK1pxRnl2bVViM1BJVms9    PET+MRI
